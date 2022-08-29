@@ -14,8 +14,6 @@ import 'package:flutter/foundation.dart'
 ///   options: DefaultFirebaseOptions.currentPlatform,
 /// );
 /// ```
-///
-
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
@@ -72,8 +70,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '39358873780',
     projectId: 'payflow-adfc8',
     storageBucket: 'payflow-adfc8.appspot.com',
-    iosClientId:
-        '39358873780-a374sa5l17giar2qhs5h2njn614eprhi.apps.googleusercontent.com',
+    iosClientId: '39358873780-a374sa5l17giar2qhs5h2njn614eprhi.apps.googleusercontent.com',
     iosBundleId: 'com.example.playflow',
   );
 }
