@@ -38,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
           Positioned(
             bottom: size.height * 0.05,
             left: 0,
-            right: 0,
+            right: 0,  
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -78,4 +78,3 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
-//17:25

@@ -18,7 +18,8 @@ class SocialLoginButton extends StatelessWidget {
             color: AppColors.shape,
             borderRadius: BorderRadius.circular(5),
             border: Border.fromBorderSide(BorderSide(color: AppColors.stroke))),
-        child: Row(children: [
+        child: Row(
+          children: [
           Expanded(
               flex: 1,
               child: Row(
