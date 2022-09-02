@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:playflow/shared/services/auth_service.dart';
 import 'package:playflow/shared/themes/app_colors.dart';
 import 'package:playflow/shared/themes/app_images.dart';
 import 'package:playflow/shared/themes/app_text_styles.dart';
@@ -57,18 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                     padding:
                         const EdgeInsets.only(left: 40, right: 40, top: 40),
                     child: SocialLoginButton(onTap: () async {
-                      GoogleSignIn _googleSignIn = GoogleSignIn(
-                        scopes: [
-                          'email',
-                          'https://www.googleapis.com/auth/contacts.readonly',
-                        ],
-                      );
-                      try {
-                        final response = await _googleSignIn.signIn();
-                        print(response);
-                      } catch (error) {
-                        print(error);
-                      }
+                     AuthService().signInWithGoogle();
                     }),
                   )
                 ]),
