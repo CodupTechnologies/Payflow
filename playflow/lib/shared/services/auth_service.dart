@@ -6,6 +6,8 @@ import '../../modules/home/home_page.dart';
 
 class AuthService{
 
+  var _isAutenticated = false;
+
   handleAuthState(){
     return StreamBuilder(
       stream: FirebaseAuth.instance.authStateChanges(),
@@ -17,11 +19,9 @@ class AuthService{
           }
       }
     );
-
   }
 
-  Future<UserCredential> signInWithGoogle() async {
-
+   signInWithGoogle() async {
     final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
     final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
     final credential = GoogleAuthProvider.credential(

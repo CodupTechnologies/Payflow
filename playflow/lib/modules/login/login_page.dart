@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:playflow/modules/home/home_page.dart';
 import 'package:playflow/shared/services/auth_service.dart';
 import 'package:playflow/shared/themes/app_colors.dart';
 import 'package:playflow/shared/themes/app_images.dart';
 import 'package:playflow/shared/themes/app_text_styles.dart';
 import 'package:playflow/shared/widgets/social_login_button.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -58,12 +60,17 @@ class _LoginPageState extends State<LoginPage> {
                     padding:
                         const EdgeInsets.only(left: 40, right: 40, top: 40),
                     child: SocialLoginButton(onTap: () async {
-                     AuthService().signInWithGoogle();
+
+                    await AuthService().signInWithGoogle();
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+
                     }),
                   )
                 ]),
           ),
+
         ]),
+        
       ),
     );
   }
