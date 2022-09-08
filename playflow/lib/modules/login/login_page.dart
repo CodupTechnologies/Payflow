@@ -62,8 +62,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: SocialLoginButton(onTap: () async {
 
                     await AuthService().signInWithGoogle();
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
-
+                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
                     }),
                   )
                 ]),

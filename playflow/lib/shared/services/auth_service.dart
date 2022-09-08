@@ -8,6 +8,7 @@ class AuthService{
 
   var _isAutenticated = false;
 
+
   handleAuthState(){
     return StreamBuilder(
       stream: FirebaseAuth.instance.authStateChanges(),
