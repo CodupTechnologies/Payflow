@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:playflow/modules/login/login_page.dart';
 import '../../modules/home/home_page.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthService{
 
   var _isAutenticated = false;
-
 
   handleAuthState(){
     return StreamBuilder(
@@ -34,6 +34,10 @@ class AuthService{
 
   signOut(){
     FirebaseAuth.instance.signOut();
+  }
+
+  void saveUser(var user) async{
+     final instance = await SharedPreferences.getInstance();
   }
 
 }
