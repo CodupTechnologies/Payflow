@@ -28,19 +28,19 @@ class _LoginPageState extends State<LoginPage> {
         child: Stack(children: [
           Container(
               width: size.width,
-              height: size.height * 0.36,
+              height: size.height * 0.38,
               color: AppColors.primary),
           Positioned(
-              top: 40,
+              top: 60,
               left: 0,
               right: 0,
               child: Image.asset(
                 AppImages.person,
-                width: 208,
-                height: 373,
+                width: 215,
+                height: 379,
               )), //person
           Positioned(
-            bottom: size.height * 0.05,
+            bottom: size.height * 0.08,
             left: 0,
             right: 0,
             child: Column(
